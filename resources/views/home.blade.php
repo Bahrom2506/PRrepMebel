@@ -9,5 +9,6 @@
 </head>
 <body>
     Page title
+    <h2>{{__('public.page_title')}}</h2>
 </body>
 </html>

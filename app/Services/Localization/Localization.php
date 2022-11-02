@@ -18,10 +18,11 @@ class Localization
     {  // funksiya perfiks bilan ishlashda yordam beradi
         $locale = request()->segment(1, '');  // segment urlni oladi 1 chi index bu 2chi yoziladiga elementimiz bu bizda til
 
-        if ($locale && inArray($locale, config("app.locales"))) {  // locales massivida til bo’lsa bajaradi.
+        if ($locale && in_array($locale, config("app.locales"))) {  // locales massivida til bo’lsa bajaradi.
 
             return $locale;
 
         }
+        return "";
     }
 }

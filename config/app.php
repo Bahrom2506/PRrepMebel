@@ -83,7 +83,7 @@ return [
     */
 
     'locale' => 'en',
-    'locales' => ['en', 'ru'],
+    'locales' => ['en', 'ru', 'uz'],
 
     /*
     |--------------------------------------------------------------------------
@@ -183,6 +183,8 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
 
+        \App\Services\Localization\LocalizationServiceProvider::class,
+
         /*
          * Package Service Providers...
          */
@@ -212,5 +214,7 @@ return [
     'aliases' => Facade::defaultAliases()->merge([
         // 'ExampleClass' => App\Example\ExampleClass::class,
     ])->toArray(),
+
+    'LocalizationService' => 		App\Services\Localization\LocalizationService::class,
 
 ];
